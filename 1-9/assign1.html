@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Elzero JavaScript Assignments - @abdsymoh</title>
+    <script>
+      // this code will not work bcuz el not loaded yet.
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // this code will work after the window is lodging and then apply the effect on el.
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // this code will work bcuz everything is loaded and work.
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
