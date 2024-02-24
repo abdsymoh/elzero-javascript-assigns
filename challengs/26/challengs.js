@@ -1,4 +1,4 @@
-// Elzero JavaScript Ep. 26 Challenge
+// Elzero JavaScript Ep. 30 Challenge
 
 let a = 1_00;
 let b = 2_00.5;
