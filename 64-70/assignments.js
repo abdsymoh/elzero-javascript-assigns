@@ -70,22 +70,24 @@ console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
 
 console.log("=".repeat(25));
 
-// // Assignment #4
-// console.log("= Assignment #4");
-// console.log("=".repeat(25));
+// Assignment #4
+console.log("= Assignment #4");
+console.log("=".repeat(25));
 
-// function specialMix(...data) {
-//   for (let i = 0; i < data.length; i++) {
+function specialMix(...data) {
+  for (let i = 0; i < data.length; i++) {
+    let onlyNumbers = data.filter((str) => /\d/.test(str)).map((i) => parseInt(i)).reduce((a, b) => a + b, 0);
+    if (onlyNumbers == 0) {
+      return `All Is Strings`
+    }
+    return onlyNumbers;
+  }
+  return data;
+}
 
-//     let onlyNumbers = data.filter((str) => /\d/.test(str)).map((i) => parseInt(i));
-//     return onlyNumbers;
-//   }
-//   return data;
-// }
+console.log(specialMix(10, 20, 30)); // 60
+console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
 
-// console.log(specialMix(10, 20, 30)); // 60
-// console.log(specialMix("10Test", "Testing", "20Cool")); // 30
-// console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
-// console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
-
-// console.log("=".repeat(25));
+console.log("=".repeat(25));
