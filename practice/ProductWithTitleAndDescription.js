@@ -3,12 +3,12 @@
   - Practice Product With Heading And Paragraph
 */
 
+let cards = document.createElement("section");
 for (i = 0; i < 100; i++) {
   // Create Elements
   let productCard = document.createElement("div");
   let productTitle = document.createElement("h2");
   let productDescription = document.createElement("p");
-  let hr = document.createElement("hr")
 
   // Create text for the title and description
   let productTitleText = document.createTextNode(`Product Title ${i + 1}`);
@@ -24,15 +24,15 @@ for (i = 0; i < 100; i++) {
   // add the description to the card
   productCard.appendChild(productDescription);
 
-  // add the hr to the card
-  productCard.appendChild(hr)
+  // add the productCard to cards
+  cards.appendChild(productCard);
 
-  // add Classes to the Elements
-  productCard.className = "product-card";
-  productTitle.className = "product-title";
-  productDescription.className = "product-desc";
+    // add Classes to the Elements
+    cards.className = "cards"
+    productCard.className = "product-card";
+    productTitle.className = "product-title";
+    productDescription.className = "product-desc";
 
-  // add the productCard to the body
-
-  document.body.appendChild(productCard);
+  // add the cards to the body
+  document.body.appendChild(cards);
 }
