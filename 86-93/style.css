@@ -1,0 +1,61 @@
+body {
+  background-color: #eee;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+  & form {
+    width: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+    & input,
+    & select {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    & input[name="create"] {
+      border: 0;
+      background-color: royalblue;
+      color: #eee;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .results {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    & div,
+    & section {
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      color: #eee;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    & div {
+      background-color: crimson;
+    }
+    & section {
+      background-color: darkorange;
+    }
+  }
+}
