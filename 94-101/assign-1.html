@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elzero JavaScript Assignments lessons 94-101 | @abdsymoh</title>
+    <script>
+      window.onload = function () {
+        let links = document.querySelectorAll("a");
+        for (let i = 0; i < links.length; i++) {
+          if (links[i].classList.contains("open")) {
+            if (links[i].textContent === "Elzero") {
+              links[i].click();
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <!-- HTML -->
+    <!-- Assign #1 -->
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+  </body>
+  <!-- JS -->
+  <!-- <script src="./assignments.js"></script> -->
+</html>
