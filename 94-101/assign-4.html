@@ -8,7 +8,15 @@
   <body>
     <!-- HTML -->
     <!-- Assign #4 -->
+    <div>
+      <span>Hello</span>
+      <!-- We Need The Next Text Without Spaces -->
+      Elzero
+    </div>
   </body>
   <!-- JS -->
-  <script src="./assignments.js"></script>
+  <script>
+    let ele = document.querySelector("div").innerText.split(" ")[1];
+    console.log(ele);
+  </script>
 </html>
