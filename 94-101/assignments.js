@@ -29,7 +29,31 @@ function addRem() {
   } else cls.textContent = "No Classes To Show";
 }
 
-add.onblur = addRem;
-remove.onblur = addRem;
+// add.onblur = addRem;
+// remove.onblur = addRem;
+
+console.log("=".repeat(25));
+
+// Assignment #3
+console.log("=".repeat(1), "[Assignment #3]", "=".repeat(7));
+
+document.querySelector("p").remove();
+
+let element = document.querySelector(".our-element");
+
+let startDiv = document.createElement("div");
+startDiv.className = "start";
+startDiv.title = "Start Element";
+startDiv.setAttribute("data-value", "Start");
+
+let endDiv = document.createElement("div");
+endDiv.className = "end";
+endDiv.title = "End Element";
+endDiv.setAttribute("data-value", "End");
+
+element.before(startDiv);
+element.after(endDiv);
+
+console.log(element);
 
 console.log("=".repeat(25));
