@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Elzero JavaScript Ep. 114 Challenge - @abdsymoh</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        gap: 20px;
+      }
+      .form {
+        background-color: #eee;
+        border: 1px solid #ddd;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .input {
+          flex: 1;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          &:focus {
+            outline: 0;
+          }
+        }
+        .add {
+          cursor: pointer;
+
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          background-color: royalblue;
+          color: #eee;
+        }
+      }
+      .tasks {
+        background-color: #eee;
+        border: 1px solid #ddd;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        gap: 10px;
+        & span {
+          width: 100%;
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-family: sans-serif;
+          font-size: 14px;
+          color: #333;
+          .del {
+            cursor: pointer;
+            background-color: crimson;
+            color: #eee;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 5px;
+          }
+          &:hover:not(.done) {
+            cursor: pointer;
+            background-color: #ffffff80;
+          }
+        }
+        .done {
+          cursor: pointer;
+          background-color: #ddd;
+          color: #33333362;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- html -->
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" />
+        <button class="add">Add Task</button>
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <!-- JS -->
+    <script src="./challengs.js"></script>
+  </body>
+</html>
