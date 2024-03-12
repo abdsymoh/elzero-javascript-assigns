@@ -2,6 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 2500px;
 }
 
 .cards {
@@ -16,4 +21,20 @@
     background-color: #eee;
     padding: 10px;
   }
+}
+
+button {
+  display: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  background-color: royalblue;
+  color: #eee;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
 }
