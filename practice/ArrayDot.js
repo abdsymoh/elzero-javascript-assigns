@@ -35,3 +35,31 @@ let check = locationsArray.every(function (n) {
 
 console.log(locationsArray);
 console.log(check);
+console.log("#".repeat(20));
+
+// Spread Syntax And Use Cases [...]
+//  [1]
+console.log("Abdullah");
+console.log(..."Abdullah");
+console.log([..."Abdullah"]);
+
+// [2]
+let allFriends = ["Sayed", "Mohamed", "Abbas"];
+let thisYearFriends = ["Samy", "Sameh"];
+allFriends.push(...thisYearFriends);
+console.log(allFriends);
+
+// [3]
+let myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(Math.max(...myNums));
+
+// [4]
+let objOne = {
+  a: 1,
+  b: 2,
+};
+let objTwo = {
+  c: 3,
+  d: 4,
+};
+console.log({ ...objOne, ...objTwo, e: 5 });
