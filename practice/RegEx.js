@@ -67,5 +67,14 @@ console.log(txt.replaceAll(txtRe, "JavaScript"));
 console.log("#".repeat(20));
 
 // Regular Expressions - Form Validation
-
-
+document.getElementById("register").onsubmit = function (e) {
+  let phoneInput = document.getElementById("phone").value;
+  // max 15 (1234) 567-8910
+  let phoneRe = /\(\d{4}\)\s\d{3}-\d{4}/;
+  let validationResult = phoneRe.test(phoneInput);
+  console.log(validationResult);
+  if (validationResult === false) {
+    return false;
+  }
+  return true;
+};
