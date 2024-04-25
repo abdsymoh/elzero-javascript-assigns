@@ -76,3 +76,54 @@ function assign3() {
 }
 assign3();
 console.log("=".repeat(25));
+
+// التكليف 04
+function assign4() {
+  console.log("// Assignment 04");
+  // =========================
+  let birthOne = new Date("12 9 94");
+  console.log(`${birthOne}`);
+
+  let birthTwo = new Date();
+  birthTwo.setMonth(11);
+  birthTwo.setDate(9);
+  birthTwo.setFullYear(1994);
+  birthTwo.setHours(0);
+  birthTwo.setMinutes(0);
+  birthTwo.setSeconds(0);
+  console.log(`${birthTwo}`);
+
+  let birthThree = new Date(1994, 11, 9);
+  console.log(`${birthThree}`);
+
+  // Needed Output
+  // "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+  // "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+  // "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+}
+assign4();
+console.log("=".repeat(25));
+
+// التكليف 05
+function assign5() {
+  console.log("// Assignment 05");
+  // =========================
+  for (let i = 0; i < 1000; i++) {
+    console.log(i);
+  }
+  let time = performance.now();
+  console.log(`Loop Took ${time} Milliseconds.`);
+  // Needed Output
+  // "Loop Took 1921 Milliseconds."
+}
+assign5();
+console.log("=".repeat(25));
+
+// التكليف 06
+function assign6() {
+  console.log("// Assignment 06");
+  // =========================
+  
+}
+assign6();
+console.log("=".repeat(25));
