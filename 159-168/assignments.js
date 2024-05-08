@@ -1,4 +1,6 @@
 // Date, Generators, Modules
+let log = console.log;
+
 console.log("Date, Generators and Modules Assignments");
 console.log("=".repeat(25));
 
@@ -104,26 +106,87 @@ function assign4() {
 assign4();
 console.log("=".repeat(25));
 
-// التكليف 05
-function assign5() {
-  console.log("// Assignment 05");
-  // =========================
-  for (let i = 0; i < 1000; i++) {
-    console.log(i);
-  }
-  let time = performance.now();
-  console.log(`Loop Took ${time} Milliseconds.`);
-  // Needed Output
-  // "Loop Took 1921 Milliseconds."
-}
-assign5();
-console.log("=".repeat(25));
+// // التكليف 05
+// function assign5() {
+//   console.log("// Assignment 05");
+//   // =========================
+//   let t0 = performance.now();
+//   for (let i = 0; i < 1000; i++) {
+//     console.log(i);
+//   }
+//   let t1 = performance.now();
+//   console.log(`Loop Took ${t1 - t0} Milliseconds.`);
+//   // Needed Output
+//   // "Loop Took 1921 Milliseconds."
+// }
+// assign5();
+// console.log("=".repeat(25));
 
 // التكليف 06
 function assign6() {
   console.log("// Assignment 06");
   // =========================
-  
+  function* gen() {
+    yield 14;
+    yield 154;
+    yield 494;
+    yield 1034;
+    yield 1774;
+    yield 2714;
+    yield 3854;
+    yield 5164;
+    yield 6734;
+  }
+  let generator = gen();
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
 }
 assign6();
+console.log("=".repeat(25));
+
+// التكليف 07
+function assign7() {
+  console.log("// Assignment 07");
+  // =========================
+  function* genNumbers() {
+    yield* [1, 2, 2, 2, 3, 4, 5];
+  }
+  function* genLetters() {
+    yield* ["A", "B", "B", "B", "C", "D"];
+  }
+  function* genAll() {
+    yield* new Set(genNumbers());
+    yield* new Set(genLetters());
+  }
+  let generator = genAll();
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+  log(generator.next());
+}
+assign7();
+console.log("=".repeat(25));
+
+// التكليف 08
+import calc from "./mod-one.js";
+import * as modOne from "./mod-two.js";
+function assign8() {
+  console.log("// Assignment 08");
+  // =========================
+
+  console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree)); // 60
+}
+assign8();
 console.log("=".repeat(25));
