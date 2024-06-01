@@ -1,6 +1,6 @@
 /**
  * ملخص فيديو: https://www.youtube.com/watch?v=VA_AROETZ58
- 
+
  * What Is JSON?
  * هي إختصار لـ JavaScript Object Notation
  * الـ JSON هي عبارة عن صيغة لمشاركة البيانات بين ال Server وال Client
@@ -16,11 +16,10 @@
 
 /**
  * ملخص فيديو: https://www.youtube.com/watch?v=mCAe4RZSLrM
- 
+
  * JSON Syntax
  * عشان أنشئ البيانات بحطها بين { }
  * البيانات بتكون عبارة عن key: value
     * ال key لازم يكون بين " "
     * كل سطر key: value بيتم فصله ب , فاصلة
-    * 
  */
